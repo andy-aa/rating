@@ -1,0 +1,23 @@
+.rating div {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    transition: all 1s ease;
+}
+
+.rating div:not(.zero) {
+    border: 1px black solid;
+}
+
+.rating div:not(.zero):not(.star):hover {
+    background: goldenrod;
+}
+
+.rating .zero {
+    background: gray;
+    border: 1px red solid;
+}
+
+.rating .star {
+    background: green;
+}
