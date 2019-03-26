@@ -20,7 +20,9 @@ document.querySelectorAll(".rating").forEach((element) => {
 });
 
 function dravStars(element) {
-    let star_count = JSON.parse(localStorage.getItem("arrRat"))[element.getAttribute("data-product-id")];
+    let storedItem = localStorage.getItem("arrRat");
+    let arrRat = storedItem ? JSON.parse(storedItem) : {};
+    let star_count = arrRat[element.getAttribute("data-product-id")];
 
     element.querySelectorAll("div").forEach(element => {
         let current_rate = element.getAttribute("data-rat-val");
